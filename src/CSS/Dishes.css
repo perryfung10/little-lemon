@@ -1,0 +1,129 @@
+.dishes {
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.dishes-title {
+    width: 860px;
+    height: 68px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.dishes-title > h1 {
+    font-family: var(--section-title-font-family);
+    font-size: var(--section-title-font-size);
+    font-weight: var(--section-title-font-weight);
+    place-self: center;
+    
+}
+
+.dishes-title > .online-menu {
+    width: 160px;
+    padding: 25px 0;
+    border-radius: 16px;
+    background-color: var(--primary-color-2);
+    color: var(--secondary-color-4);
+    font-family: var(--section-categories-font-family);
+    font-size: var(--section-categories-font-size);
+    font-weight: var(--section-categories-font-weight);
+    border: none;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dishes-card {
+    display: flex;
+    justify-content: center;
+    column-gap: 44px;
+    margin-top: 77px;
+}
+
+.dish-card {
+    width: 282px;
+    height: 455px;
+    position: relative;
+}
+
+.dish-card > img {
+    width: 100%;
+    height: 188px;
+    border-radius: 16px 16px 0 0;
+    margin: 0;
+    position: absolute;
+}
+
+.dish-card > .dish-content {
+    height: auto;
+    padding: 30px 20px;
+    background-color: var(--secondary-color-3);
+    position: absolute;
+    top: 188px
+
+}
+
+.dish-content > .dish-title, .dish-content > .dish-price {
+    display: inline-block;
+}
+
+.dish-content > .dish-title {
+    width: 75%;
+    font-family: var(--card-title-font-family);
+    font-size: var(--card-title-font-size);
+    font-weight: var(--card-title-font-weight);
+}
+
+
+.dish-content > .dish-price {
+    width: 25%;
+    text-align: right;
+    color: var(--secondary-color-1);
+    font-family: var(--highlight-text-font-family);
+    font-size: var(--highlight-text-font-size);
+    font-weight: var(--highlight-text-font-weight);
+
+}
+
+.dish-content > .dish-description{
+    font-family: var(--paragraph-text-font-family);
+    font-size: var(--paragraph-text-font-size);
+    font-weight: var((--paragraph-text-font-weight));
+}
+
+
+.dish-content > .dish-description, .dish-content > .dish-order {
+    margin-top: 25px;
+}
+
+.dish-content > .dish-order {
+    margin-top: 25px;;
+}
+
+.dish-content > a {
+    font-family: var(--lead-text-font-family);
+    font-size: var(--lead-text-font-size);
+    font-weight: var(--lead-text-font-weight);
+    display: block;
+    position: relative;
+    top: 10px;
+    text-decoration: none;
+    padding: 10px;
+    color: var(--secondary-color-4);
+}
+
+.dish-content > a:hover {
+    background-color: var(--secondary-color-1);
+    border-radius: 16px;
+}
+
+
+.delivery-btn {
+    width: 31px;
+    height: 25px;
+    position: absolute;
+    right: 8px;
+}

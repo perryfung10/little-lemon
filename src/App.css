@@ -37,8 +37,27 @@
   }
 } */
 
-* {
-  box-sizing: border-box;
+.App {
+
+  display: grid;
+  max-width: 1440px;
+  max-height: 2900px;
+  grid-template-areas: "head"
+                       "main"
+                       "footer";
+  grid-template-rows: 150px 1fr 450px
+  
 }
 
+Header {
+  grid-area: head;
+}
 
+Main {
+  grid-area: main;
+}
+
+Footer {
+
+  grid-area: footer;
+}
