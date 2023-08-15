@@ -1,20 +1,13 @@
 import "../CSS/Main.css"
-import { About } from "./About"
-import { Dishes } from "./Dishes"
-import { Hero } from "./Hero"
-import { Testimonials } from "./Testimonials"
 
-export const Main = () => {
+export const Main = ({children}) => {
 
-    
 return (
 
     <main>
-        <Hero />
-        <Dishes />
-        <Testimonials />
-        <About />
+        {children}
       </main>
 )
 
 }
+

@@ -1,0 +1,16 @@
+.successful {
+    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--secondary-color-3);
+}
+
+.successfulMessage {
+    margin-top: 150px;
+    font-family: var(--display-title-font-family);
+    font-size: var(--display-title-font-size);
+    font-weight: var(--display-title-font-family);
+    color: green;
+    opacity: 0.6;
+}

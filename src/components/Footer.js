@@ -8,17 +8,21 @@ import { ReactComponent as CompanyLogo } from "../assets/Logo.svg"
 
 export const Footer = () => {
 
+    const handleClick = () => {
+        window.scrollTo({top: 0, behavior: "smooth"})
+    }
+
     return (
         <div className="footer">
             <CompanyLogo />
             <nav>
                 <div className="nav-footer">
                     <h1>Doormat Navigation</h1>
-                    <Link to='/home' className='link'>Home</Link>
+                    <Link to='/' className='link' onClick={handleClick}>Home</Link>
                     <Link to='/menu' className='link'>Menu</Link>
-                    <Link to='/reservation' className='link'>Reservation</Link>
+                    <Link to='/reservation' className='link' onClick={handleClick}>Reservation</Link>
                     <Link to='/order-online' className='link'>Order Online</Link>
-                    <Link to='login' className='link'>Login</Link>
+                    <Link to='/login' className='link'>Login</Link>
                 </div>
                 <div className="nav-footer">
                     <h1>Contact</h1>

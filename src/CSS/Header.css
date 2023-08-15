@@ -18,9 +18,7 @@ nav > .link, .nav-footer > .link  {
 }
 
 nav > .link {
-
     color: var(--secondary-color-4);
-    
 }
 
 /* nav > .link:visited {

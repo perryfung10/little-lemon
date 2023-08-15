@@ -9,6 +9,8 @@ import { Link } from "react-router-dom"
 
 export const Dishes = () => {
 
+    
+
     return (
         <section className="dishes">
             <div className="dishes-title">
@@ -44,7 +46,6 @@ export const Dishes = () => {
                     </div>
                 </article>
             </div>
-            
         </section>
 
     )
