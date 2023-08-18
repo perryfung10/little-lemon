@@ -6,11 +6,9 @@ import { ReactComponent as CompanyLogo } from "../assets/Logo.svg"
 
 
 
-export const Footer = () => {
+export const Footer = ({handleScrollToTop}) => {
 
-    const handleClick = () => {
-        window.scrollTo({top: 0, behavior: "smooth"})
-    }
+    
 
     return (
         <div className="footer">
@@ -18,9 +16,9 @@ export const Footer = () => {
             <nav>
                 <div className="nav-footer">
                     <h1>Doormat Navigation</h1>
-                    <Link to='/' className='link' onClick={handleClick}>Home</Link>
+                    <Link to='/' className='link' onClick={handleScrollToTop}>Home</Link>
                     <Link to='/menu' className='link'>Menu</Link>
-                    <Link to='/reservation' className='link' onClick={handleClick}>Reservation</Link>
+                    <Link to='/reservation' className='link' onClick={handleScrollToTop}>Reservation</Link>
                     <Link to='/order-online' className='link'>Order Online</Link>
                     <Link to='/login' className='link'>Login</Link>
                 </div>
@@ -33,10 +31,9 @@ export const Footer = () => {
                 <div className="nav-footer">
                     <h1>Social Media Links</h1>
                     <div className="social-media-icons">
-                        <a href="https://www.instagram.com/littlelemonmeta/"  className="fa fa-instagram"/>
-                        <a href="https://twitter.com/littlelemonmeta" className="fa fa-twitter" />
-                        <a href="https://www.youtube.com/channel/UCrd6OWO0IpuVjibO4Q1IwwQ" className=" fa fa-brands fa-youtube" />
-                        
+                        <a href="https://www.instagram.com/littlelemonmeta/"  className="fa fa-instagram" target="_blank" rel="noopner noreferrer"/>
+                        <a href="https://twitter.com/littlelemonmeta" className="fa fa-twitter" target="_blank" rel="noopner noreferrer"/>
+                        <a href="https://www.youtube.com/channel/UCrd6OWO0IpuVjibO4Q1IwwQ" className=" fa fa-brands fa-youtube" target="_blank" rel="noopner noreferrer"/>
                     </div>
                     
                 </div>

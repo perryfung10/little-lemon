@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import "../CSS/Hero.css"
-import restaurantFoodPic from "../assets/restauranfood.jpg"
+import "../../CSS/Hero.css"
+import restaurantFoodPic from "../../assets/restauranfood.jpg"
 
 export const Hero = () => {
     

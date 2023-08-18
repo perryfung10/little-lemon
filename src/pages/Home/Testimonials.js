@@ -1,9 +1,9 @@
 import { useState } from "react"
-import "../CSS/Testimonials.css"
-import alan from "../assets/Testimonials/Alan.jpg"
-import mary from  "../assets/Testimonials/Mary.jpg"
-import matthew from "../assets/Testimonials/Matthew.jpg"
-import jenny from "../assets/Testimonials/Jenny.jpg"
+import "../../CSS/Testimonials.css"
+import alan from "../../assets/Testimonials/Alan.jpg"
+import mary from  "../../assets/Testimonials/Mary.jpg"
+import matthew from "../../assets/Testimonials/Matthew.jpg"
+import jenny from "../../assets/Testimonials/Jenny.jpg"
 
 
 
@@ -51,7 +51,7 @@ export const Testimonials = () => {
         <span className="fa fa-star checked"></span>
         <span className="fa fa-star "></span>
         <span className="fa fa-star"></span></span>,
-        review: "The whole experience is nice from shop design to delivery."
+        review: "The kinds of food could be more diverse. Overall, it is not bad."
     }]
     )
 

@@ -1,8 +1,8 @@
-import "../CSS/Dishes.css"
-import greekSaladPic from "../assets/dishesFotos/greek salad.jpg"
-import bruschettaPic from "../assets/dishesFotos/Bruschetta.png"
-import lemonDessertPic from "../assets/dishesFotos/lemon dessert.jpg"
-import { ReactComponent as TruckLogo } from "../assets/truck-solid.svg"
+import "../../CSS/Dishes.css"
+import greekSaladPic from "../../assets/dishesFotos/greek salad.jpg"
+import bruschettaPic from "../../assets/dishesFotos/Bruschetta.png"
+import lemonDessertPic from "../../assets/dishesFotos/lemon dessert.jpg"
+import { ReactComponent as TruckLogo } from "../../assets/truck-solid.svg"
 import { Link } from "react-router-dom"
 
 

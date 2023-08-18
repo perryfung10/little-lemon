@@ -1,11 +1,11 @@
 
 .Hero {
-    height: 600px;
+    min-height: 600px;
 }
 
 
 .hero-section {
-    height: 500px;
+    min-height: 500px;
     display: flex;
     background-color: #495E57;
     column-gap: 200px;
@@ -74,6 +74,8 @@ img {
     border-radius: 8px;
     object-fit: cover;
     margin-top: 15%;
+    margin-bottom: -5%;
+    z-index: 1;
 }
 
 .block {
