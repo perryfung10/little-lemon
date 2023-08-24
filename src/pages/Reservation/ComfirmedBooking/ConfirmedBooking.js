@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
-import { ReactComponent as SuccessfulLogo } from "../../assets/check-solid.svg"
-import "../../CSS/SuccessfulPage.css"
+import { ReactComponent as SuccessfulLogo } from "../../../assets/check-solid.svg"
+import "../../../CSS/SuccessfulPage.css"
 
-export const SuccessfulPage = ({navigate}) => {
 
+export const ConfirmedBooking = ({navigate}) => {
+
+    
 
     const [seconds, setSeconds] = useState(4)
     
@@ -16,7 +18,8 @@ export const SuccessfulPage = ({navigate}) => {
       const interval = setInterval(()=> {
         setSeconds(s => s-1)
       }, 1000)
-    
+
+      
       return () => {
         clearTimeout(redirect);
         clearInterval(interval)

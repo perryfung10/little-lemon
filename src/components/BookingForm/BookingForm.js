@@ -1,16 +1,15 @@
 
-import "../CSS/BookingForm.css"
+import "../../CSS/BookingForm.css"
 
 export const BookingForm = ({formData, handleBlur, handleChange, availableTimes, availableOccasion, isTimeDropdownOpen, isOccasionDropdownOpen, handleTimeDropdown, handleOccasionDropdown, handleSubmit, handleChosenTimeBtn, handleChosenOccasionBtn, formValidation}) => {
 
 
-
     return (
-        <form onSubmit={handleSubmit} className="booking-form">
+        <form name="booking-form" onSubmit={handleSubmit} className="booking-form" autoComplete="">
                 <div className="form-label-input">
-                    <label htmlFor="userLastName">Last Name : <sup>*</sup> </label>
+                    <label htmlFor="userLastName">Last Name : <sup>*</sup></label>
                     <div className="userInput">
-                        <input id="userLastName" name="lastName" value={formData.lastName.value} type="text"  onBlur={e => handleBlur("lastName" ,e.target.value, e.target.name, e.target.value.length >4, "It must have at least 4 characters")} onChange={e => handleChange("lastName", e.target.value)} aria-describedby={formData.lastName.error? "last Name Error" : "Please Enter Your Last Name"} required/>
+                        <input id="userLastName" name="lastName" value={formData.lastName.value} type="text"  onBlur={e => handleBlur("lastName" ,e.target.value, e.target.name, e.target.value.length > 3, "It must have at least 4 characters")} onChange={e => handleChange("lastName", e.target.value)} aria-describedby={formData.lastName.error? "last Name Error" : "Please Enter Your Last Name"} required/>
                         {formData.lastName.error && <div className="inputErrorMessage">{formData.lastName.error}</div>}
                     </div>
                     
@@ -22,17 +21,17 @@ export const BookingForm = ({formData, handleBlur, handleChange, availableTimes,
                     </div>
                 </div>
                 <div className="form-label-input">
-                    <label htmlFor="userEmail">Email : <sup>*</sup> </label>
+                    <label htmlFor="userEmail">Email : <sup>*</sup></label>
                     <div className="userInput">
-                        <input id="userEmail" type="email" name="email" value={formData.email.value} onBlur={e => handleBlur("email" ,e.target.value, e.target.name, e.target.value.length >10, "It must have at least 11 characters")} onChange={e => handleChange("email", e.target.value)} aria-describedby={formData.email.error? "Email Error" : "Please Enter Your Email"}  required/>
+                        <input data-testid="userEmail" id="userEmail" type="email" name="email" value={formData.email.value} onBlur={e => handleBlur("email" ,e.target.value, e.target.name, e.target.value.length >10, "It must have at least 11 characters")} onChange={e => handleChange("email", e.target.value)} aria-describedby={formData.email.error? "Email Error" : "Please Enter Your Email"}  required/>
                         {formData.email.error && <div className="inputErrorMessage">{formData.email.error}</div>}
                     </div>
 
                 </div>
                 <div className="form-label-input">
-                    <label htmlFor="bookedDate">Date : <sup>*</sup> </label>
+                    <label htmlFor="bookingDate">Date : <sup>*</sup></label>
                     <div className="userInput">
-                        <input id="bookedDate" type="date" onBlur={e => handleBlur("date" ,e.target.value, e.target.name, e.target.value, "Must pick a date")} onChange={e => handleChange("date", e.target.value)} aria-describedby="dateError" required/>
+                        <input id="bookingDate" type="date" name="bookingDate" value={formData.date.value} onBlur={e => handleBlur("date" ,e.target.value, e.target.name, e.target.value, "Must pick a date")} onChange={e => handleChange("date", e.target.value)} aria-describedby="dateError" required/>
                         {formData.date.error && <div className="inputErrorMessage">Must pick a date</div>}
                     </div>
                 </div>

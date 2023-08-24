@@ -1,16 +1,16 @@
-import "../../CSS/BookingPage.css"
+import "../../../CSS/BookingPage.css"
 import {useState} from "react"
-import { BookingForm } from "../../components/BookingForm";
 import { useNavigate } from "react-router-dom";
+import { BookingForm } from "../../../components/BookingForm/BookingForm";
 
 
-export const BookingPage = ({formData, setFormData, availableTimes, dispatch}) => {
+export const BookingPage = ({formData, setFormData, availableTimes, dispatch, submitForm, storedFormData}) => {
 
     
     const availableOccasion = ["Birthday", "Engagement", "Anniversary"]
 
 
-    const formValidation = formData.lastName.value.length > 4 && formData.email.value.length > 10 &&  formData.date.value  && formData.time.value && formData.numberOfGuests.value > 0 && formData.numberOfGuests.value < 21 && formData.occasion !== "occasion"
+    const formValidation = formData.lastName.value.length > 3 && formData.email.value.length > 10 &&  formData.date.value  && formData.time.value && formData.numberOfGuests.value > 0 && formData.numberOfGuests.value < 21 && formData.occasion !== "occasion"
 
     const navigate = useNavigate();
 
@@ -24,13 +24,18 @@ export const BookingPage = ({formData, setFormData, availableTimes, dispatch}) =
                 error: ""
             }
         }))
+
+        if(fieldName === "date"){
+            dispatch(value)
+        }
+        
     }
 
-    const handleBlur = (fieldName, value, name, typeOfvalidation, message) => {
+    const handleBlur = (fieldName, value, name, typeOfValidation, message) => {
 
         if(!value){
             formData[fieldName].error = "Field cannot be empty";
-        }else if(fieldName === name && !typeOfvalidation){
+        }else if(fieldName === name && !typeOfValidation){
             formData[fieldName].error = message
         }
 
@@ -78,8 +83,11 @@ export const BookingPage = ({formData, setFormData, availableTimes, dispatch}) =
     const handleSubmit = e => {
         
         e.preventDefault();
-        navigate("/successful")
-        console.log(formData)
+        submitForm(formData)
+       
+        localStorage.setItem("storedFormData", JSON.stringify(formData));
+
+        console.log(JSON.parse(localStorage.getItem("storedFormData")))
         clearFormData()
     }
 
@@ -101,7 +109,6 @@ export const BookingPage = ({formData, setFormData, availableTimes, dispatch}) =
 
     const handleChosenTimeBtn = e => {
         handleChange("time", e.target.value)
-        dispatch({type: e.target.value})
         setIsTimeDropdownOpen(!isTimeDropdownOpen);
         
     }
@@ -115,7 +122,7 @@ export const BookingPage = ({formData, setFormData, availableTimes, dispatch}) =
 
         <div className="booking">
             <h1 className="booking-section">Bookings</h1>
-            <BookingForm formData={formData} setFormData={setFormData} handleBlur={handleBlur} handleChange={handleChange} availableTimes={availableTimes} availableOccasion={availableOccasion} isTimeDropdownOpen={isTimeDropdownOpen} isOccasionDropdownOpen={isOccasionDropdownOpen} handleTimeDropdown={handleTimeDropdown} handleOccasionDropdown={handleOccasionDropdown}  handleSubmit={handleSubmit} handleTimeDropdown={handleTimeDropdown} handleOccasionDropdown={handleOccasionDropdown} handleChosenTimeBtn={handleChosenTimeBtn} handleChosenOccasionBtn={handleChosenOccasionBtn} formValidation={formValidation} />
+            <BookingForm formData={formData} setFormData={setFormData} navigate={navigate} handleBlur={handleBlur} handleChange={handleChange} availableTimes={availableTimes} availableOccasion={availableOccasion} isTimeDropdownOpen={isTimeDropdownOpen} isOccasionDropdownOpen={isOccasionDropdownOpen} handleTimeDropdown={handleTimeDropdown} handleOccasionDropdown={handleOccasionDropdown}  handleSubmit={handleSubmit} handleChosenTimeBtn={handleChosenTimeBtn} handleChosenOccasionBtn={handleChosenOccasionBtn} formValidation={formValidation}/>
 
 
         </div>

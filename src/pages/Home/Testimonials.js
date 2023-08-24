@@ -57,7 +57,6 @@ export const Testimonials = () => {
 
 
     return (
-            // <img src={usersData[3].img} style={{width: '100px', height: "100px" }} />
         <section className="testimonials">
             <h1 className="section-title">Testimonials</h1>
             <div className="testimonials-card">
@@ -70,7 +69,7 @@ export const Testimonials = () => {
                                 <img className="user-photo" src={userData.img} alt="Alan" />
                                 <h3 className="user-name">{userData.userName}</h3>
                             </div>
-                            <blockquote className="testimonial-description"><i>" {userData.review} "</i></blockquote>
+                            <blockquote data-testid="review" className="testimonial-description"><i>" {userData.review} "</i></blockquote>
                         </article>
                     )
             })}

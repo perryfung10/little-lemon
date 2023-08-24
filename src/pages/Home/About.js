@@ -16,8 +16,8 @@ export const About = () => {
                     </p>
                 </div>
                 <div className="founders-photos">
-                    <img src={marioAdrian1} alt="" className="photo1" />
-                    <img src={marioAdrian2} alt="" className="photo2" />
+                    <img src={marioAdrian1} alt="mario & Adrian 1" className="photo1" />
+                    <img src={marioAdrian2} alt="mario & Adrian 2" className="photo2" />
                 </div>
             </article>
         </section>

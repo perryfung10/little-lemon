@@ -19,12 +19,12 @@ export const Dishes = () => {
             </div>
             <div className="dishes-card">
                 <article className="dish-card">
-                    <img src={greekSaladPic} alt="" />
+                    <img src={greekSaladPic} alt="greekSalad" />
                     <div className="dish-content">
                         <h3 className="dish-title">Greek Salad</h3>
                         <p className="dish-price">$12.99</p>
                         <p className="dish-description">This is a template of week’s special ‘s description</p>
-                        <Link to="/order-online" className="dish-order">Order Delivery <span><TruckLogo className="delivery-btn" /></span></Link>
+                        <Link data-testid="dish-order" to="/order-online" className="dish-order">Order Delivery <span><TruckLogo className="delivery-btn" /></span></Link>
                     </div>
                 </article>
                 <article className="dish-card">

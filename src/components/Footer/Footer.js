@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
-import "../CSS/Footer.css"
-import { ReactComponent as CompanyLogo } from "../assets/Logo.svg"
+import "../../CSS/Footer.css"
+import { ReactComponent as CompanyLogo } from "../../assets/Logo.svg"
 
 
 
@@ -31,9 +31,9 @@ export const Footer = ({handleScrollToTop}) => {
                 <div className="nav-footer">
                     <h1>Social Media Links</h1>
                     <div className="social-media-icons">
-                        <a href="https://www.instagram.com/littlelemonmeta/"  className="fa fa-instagram" target="_blank" rel="noopner noreferrer"/>
-                        <a href="https://twitter.com/littlelemonmeta" className="fa fa-twitter" target="_blank" rel="noopner noreferrer"/>
-                        <a href="https://www.youtube.com/channel/UCrd6OWO0IpuVjibO4Q1IwwQ" className=" fa fa-brands fa-youtube" target="_blank" rel="noopner noreferrer"/>
+                        <a href="https://www.instagram.com/littlelemonmeta/" data-testid="instagram"  className="fa fa-instagram" target="_blank" rel="noopner noreferrer"/>
+                        <a href="https://twitter.com/littlelemonmeta" data-testid="twitter" className="fa fa-twitter" target="_blank" rel="noopner noreferrer"/>
+                        <a href="https://www.youtube.com/channel/UCrd6OWO0IpuVjibO4Q1IwwQ" data-testid="youtube" className=" fa fa-brands fa-youtube" target="_blank" rel="noopner noreferrer"/>
                     </div>
                     
                 </div>
