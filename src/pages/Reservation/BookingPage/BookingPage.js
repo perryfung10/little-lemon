@@ -1,16 +1,16 @@
-import "../../../CSS/BookingPage.css"
+import "./BookingPage.css"
 import {useState} from "react"
 import { useNavigate } from "react-router-dom";
 import { BookingForm } from "../../../components/BookingForm/BookingForm";
 
 
-export const BookingPage = ({formData, setFormData, availableTimes, dispatch, submitForm, storedFormData}) => {
+export const BookingPage = ({formData, setFormData, availableTimes, dispatch, submitForm}) => {
 
     
-    const availableOccasion = ["Birthday", "Engagement", "Anniversary"]
+    const availableOccasions = ["Birthday", "Engagement", "Anniversary"]
 
 
-    const formValidation = formData.lastName.value.length > 3 && formData.email.value.length > 10 &&  formData.date.value  && formData.time.value && formData.numberOfGuests.value > 0 && formData.numberOfGuests.value < 21 && formData.occasion !== "occasion"
+    const formValidation = formData.lastName.value.length > 3 && formData.email.value.length > 10 &&  formData.date.value  && formData.time.value !== "choose time" && formData.numberOfGuests.value > 0 && formData.numberOfGuests.value < 21 
 
     const navigate = useNavigate();
 
@@ -122,7 +122,7 @@ export const BookingPage = ({formData, setFormData, availableTimes, dispatch, su
 
         <div className="booking">
             <h1 className="booking-section">Bookings</h1>
-            <BookingForm formData={formData} setFormData={setFormData} navigate={navigate} handleBlur={handleBlur} handleChange={handleChange} availableTimes={availableTimes} availableOccasion={availableOccasion} isTimeDropdownOpen={isTimeDropdownOpen} isOccasionDropdownOpen={isOccasionDropdownOpen} handleTimeDropdown={handleTimeDropdown} handleOccasionDropdown={handleOccasionDropdown}  handleSubmit={handleSubmit} handleChosenTimeBtn={handleChosenTimeBtn} handleChosenOccasionBtn={handleChosenOccasionBtn} formValidation={formValidation}/>
+            <BookingForm formData={formData} setFormData={setFormData} navigate={navigate} handleBlur={handleBlur} handleChange={handleChange} availableTimes={availableTimes} availableOccasions={availableOccasions} isTimeDropdownOpen={isTimeDropdownOpen} isOccasionDropdownOpen={isOccasionDropdownOpen} handleTimeDropdown={handleTimeDropdown} handleOccasionDropdown={handleOccasionDropdown}  handleSubmit={handleSubmit} handleChosenTimeBtn={handleChosenTimeBtn} handleChosenOccasionBtn={handleChosenOccasionBtn} formValidation={formValidation}/>
 
 
         </div>

@@ -1,13 +1,13 @@
-import "../../CSS/About.css"
-import marioAdrian1 from "../../assets/Mario-and-Adrian/Mario and Adrian b.jpg"
-import marioAdrian2 from "../../assets/Mario-and-Adrian/Mario and Adrian A.jpg"
+import "./About.css"
+import marioAdrian1 from "../../../assets/Mario-and-Adrian/Mario and Adrian b.jpg"
+import marioAdrian2 from "../../../assets/Mario-and-Adrian/Mario and Adrian A.jpg"
 
 export const About = () => {
 
 
     return (
         <section className="about">
-            <article>
+            <article className="about-content">
                 <div className="about-texts">   
                     <h1 className="about-title">About</h1>
                     <h2 className="founders">Adrian & Mario</h2>

@@ -34,21 +34,29 @@ describe('render BookingForm component', () => {
     occasion: "",
 }
     
+   
 
-    test('test submit button disable function', async () => { 
+    test('test submit button disable function', ()=> { 
 
-        
+        const mockHandleChosenTimeBtn = jest.fn();
 
 
-        render (<BookingForm formData={mockData}/>)
+        render (<BookingForm formData={mockData} handleChosenTimeBtn={mockHandleChosenTimeBtn}/>)
 
-        
-        await fireEvent.click(screen.getByRole("button", {name: /submit/i}))
-        expect(screen.getByRole("button", {name: /submit/i})).toBeDisabled()
+        const submitBtn = screen.getByText(/submit/i)
+
+        fireEvent.click(submitBtn)
+        expect(submitBtn).toBeDisabled()
 
 
      })
      
+     
+
+
+
+
+      })
      
 
 

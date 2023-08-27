@@ -3,7 +3,7 @@
 
 }
 
-.about > article {
+.about > .about-content {
     height: 100%;
     display: flex;
 }
@@ -68,5 +68,38 @@ article > .founders-photos {
     top: 20px;
 }
 
+@media screen and (max-width: 767px){
+    .about {
+        max-width: 100vw;
+        min-height: 1000px;
+        padding: 0;
+
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .founders-photos {
+        align-self: flex-start;
+
+       
+    }
+
+    .founders-photos > img {
+        max-width: 200px;
+        max-height: 250px;
+    }
+
+    .founders-photos > .photo1 {
+        left: 30px;
+    }
+
+    .founders-photos > .photo2 {
+        left: 150px;
+    }
+
+}
 
 

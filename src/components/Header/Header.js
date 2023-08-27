@@ -1,21 +1,13 @@
 import { Link } from 'react-router-dom';
 import {ReactComponent as Logo} from "../../assets/Logo.svg"
-import "../../CSS/Header.css"
+import "./Header.css"
 
 
-const Nav = ({children}) => {
 
-    return (
-        <>
-            {children}
-        </>
-    )
-}
 
 export const Header = () => {
 
     return (
-        <Nav>
             <header className="header">
                 <div className='logo'>
                     {/* <img src="../assets/Logo.svg" alt="logo"/> */}
@@ -29,7 +21,6 @@ export const Header = () => {
                     <Link to='/login' className='link'>Login</Link>
                 </nav>
             </header>
-        </Nav>
         
     )
 }

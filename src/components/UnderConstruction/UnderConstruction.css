@@ -1,0 +1,13 @@
+
+.under-construction {
+    min-height: 50vh;
+    line-height: 3rem;
+}
+
+.under-construction > h1, .under-construction > h2 {
+    text-align: center;
+}
+.under-construction > h1 {
+    margin-top: 25%;
+}
+

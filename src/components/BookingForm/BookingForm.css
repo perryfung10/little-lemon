@@ -1,5 +1,5 @@
 .booking-form {
-    width: 1240px;
+    min-width: 50vw;
     min-height: 850px;
     padding: 39px 30px;
     border: 3px solid black;
@@ -31,7 +31,7 @@
     font-size: 14px;
 }
 
-.booking-form > .form-label-input input, .dropdown-menu button{
+.booking-form > .form-label-input input, select{
     min-width: 150px;
     border-radius: 16px;
     border: none;
@@ -42,18 +42,18 @@
 
 
 
-
 .form-label-input > .userInput {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-/* .form-label-input > input {
-    position: relative;
-} */
+select {
+    text-align: center;
+    border-radius: none;
+}
 
-.dropdown-content button,  #numberOfGuests, #bookedOccasion {
+#bookingDate ,#bookedTime ,#numberOfGuests, #bookedOccasion {
     text-align: center;
     font-family: var(--highlight-text-font-family);
     font-size: var(--highlight-text-font-size);
@@ -61,8 +61,8 @@
 }
 
 
-.dropdown-menu > button{
-        /** for the dropdown indicator */
+/* .dropdown-menu > button{
+        * for the dropdown indicator
         appearance: none;
         background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
         background-repeat: no-repeat;
@@ -91,10 +91,10 @@
 
 .dropdown-content button:hover {
     background-color: grey;
-}
+} */
 
 .submit-btn {
-    width: 1152px;
+    max-width: 100%;
     height: 60px;
     margin-top: 100px;
 }
@@ -130,4 +130,19 @@ button[type="submit"]:hover {
     color: grey;
     border: 3px solid red
 
+}
+
+
+@media screen and (max-width: 767px) {
+
+
+    .booking-form {
+        max-width: 90vw;
+        min-height: 1000px
+    }
+
+    .booking-form > .form-label-input {
+        flex-direction: column;
+        row-gap: 10px;
+    }
 }

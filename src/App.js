@@ -4,19 +4,20 @@ import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 
 
-
 function App() {
 
 
+  
+
   const handleScrollToTop = () => {
-    window.scrollTo({top: 0, behavior: "smooth"})
+    window.scrollTo({top: 0, left: 0, behavior: "smooth"})
 }
 
   return (
     
     <div className='App'>
       <Header />
-      <Main />
+      <Main handleScrollToTop={handleScrollToTop}/>
       <Footer handleScrollToTop={handleScrollToTop}/>
       
     </div>

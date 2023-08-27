@@ -1,9 +1,13 @@
 import { useState, useReducer} from "react";
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { BookingPage } from '../../pages/Reservation/BookingPage/BookingPage';
-import { HomePage } from "../../pages/Home/HomePage";
+import { HomePage } from "../../pages/Home/HomePage/HomePage";
 import { ConfirmedBooking } from "../../pages/Reservation/ComfirmedBooking/ConfirmedBooking";
 import { fetchAPI, submitAPI } from "../../utils/Api";
+import './Main.css';
+import Menu from "../../pages/Menu/Menu";
+import OrderOnline from "../../pages/Order Online/OrderOnline";
+import Login from "../../pages/Login/Login";
 
 
 
@@ -18,7 +22,7 @@ export const updateTimes = (availableTimes, date) => {
 }
 
 
-export const Main = ({chidlren}) => {
+export const Main = ({handleScrollToTop}) => {
 
     
 
@@ -41,19 +45,17 @@ export const Main = ({chidlren}) => {
           error: ""
         },
         time: {
-          value: "",
+          value: "choose time",
           error: "",
         },
         numberOfGuests : {
           value: 1,
           error: "",
         },
-        occasion: "",
+        occasion: "Birthday",
     }
 );
 
-    
-    
 
     const navigate = useNavigate();
    
@@ -81,13 +83,13 @@ return (
 
     <main>
       <Routes>
-            <Route path='/' element={<HomePage/>} />
-            {/* <Route path='/menu' element={<Menu />} />  */}
+            <Route path='/' element={<HomePage handleScrollToTop={handleScrollToTop}/>} />
+            <Route path='/menu' element={<Menu />} /> 
             <Route path='/reservation' element={<BookingPage formData={formData} setFormData={setFormData} availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
             <Route path="/successful" element={<ConfirmedBooking navigate={navigate} formData={formData}/>} />
-            {/* <Route path='/order-online' element={<OrderOnline />} />
-            <Route path='/login' element={<Login />} />  */}
-          </Routes>
+            <Route path='/order-online' element={<OrderOnline />} />
+            <Route path='/login' element={<Login />} /> 
+      </Routes>
     </main>
 )
 

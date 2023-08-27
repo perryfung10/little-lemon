@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { ReactComponent as SuccessfulLogo } from "../../../assets/check-solid.svg"
-import "../../../CSS/SuccessfulPage.css"
+import "./ConfirmedBooking.css"
 
 
 export const ConfirmedBooking = ({navigate}) => {
